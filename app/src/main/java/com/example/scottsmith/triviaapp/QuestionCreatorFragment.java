@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class QuestionCreatorFragment extends Fragment {
@@ -32,7 +33,7 @@ public class QuestionCreatorFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragement_question_creator, container, false);
-        
+        ButterKnife.bind(this, view);
         return view;
     }
 
