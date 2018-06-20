@@ -8,7 +8,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    private QuestionCreatorFragment questionCreatorFragment ;
+    private QuestionCreatorFragment questionCreatorFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.add_question_button)
-    protected void addQuestionClicked(){
-questionCreatorFragment = QuestionCreatorFragment.newInstance();
+    protected void addQuestionClicked() {
+        questionCreatorFragment = QuestionCreatorFragment.newInstance();
 
-getSupportFragmentManager().beginTransaction().replace(R.id.fragment_holder, questionCreatorFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_holder, questionCreatorFragment).commit();
     }
 }

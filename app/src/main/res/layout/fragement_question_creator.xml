@@ -1,64 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorAccent">
 
     <EditText
         android:id="@+id/question_edittext"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Question goes here"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="44dp" />
+        app:layout_constraintEnd_toEndOf="@+id/correct_answer_edititext"
+        app:layout_constraintStart_toStartOf="@+id/correct_answer_edititext"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/correct_answer_edititext"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="Correct Answer Goes Here"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="168dp" />
+        app:layout_constraintBottom_toTopOf="@+id/first_wrong_answer_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/first_wrong_answer_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/first_wrong_answer_edit_text" />
 
     <EditText
         android:id="@+id/first_wrong_answer_edit_text"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
         android:ems="10"
         android:hint="First Wrong Answer Goes Here"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="222dp" />
+        app:layout_constraintBottom_toTopOf="@+id/second_wrong_answer_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/second_wrong_answer_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/second_wrong_answer_edit_text" />
 
     <EditText
         android:id="@+id/second_wrong_answer_edit_text"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
         android:ems="10"
         android:hint="Second Wrong Answer Goes Here"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="276dp" />
+        app:layout_constraintBottom_toTopOf="@+id/third_wrong_answer_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/third_wrong_answer_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/third_wrong_answer_edit_text" />
 
     <EditText
         android:id="@+id/third_wrong_answer_edit_text"
         android:layout_width="368dp"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="Third Wrong Answer Goes Here"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="330dp" />
+        app:layout_constraintBottom_toTopOf="@+id/save_question_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/save_question_button"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
         android:text="Save Question"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="424dp" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
